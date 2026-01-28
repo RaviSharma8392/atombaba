@@ -1,10 +1,13 @@
 import { Routes, Route } from "react-router-dom";
-import JEEMains from "./pages/JEEMainsPage";
+import JEEMainsPage from "./pages/JEEMainsPage";
+import ChatBotButton from "./components/ChatBotButton";
 
 export default function App() {
   return (
     <Routes>
       {/* Home or chatbot redirect page */}
+      <ChatBotButton />
+
       <Route
         path="/"
         element={
@@ -30,7 +33,7 @@ export default function App() {
       />
 
       {/* JEE MAINS Page */}
-      <Route path="/jee-mains" element={<JEEMains />} />
+      <Route path="/jee-mains" element={<JEEMainsPage />} />
     </Routes>
   );
 }
